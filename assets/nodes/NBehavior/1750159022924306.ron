@@ -1,0 +1,1 @@
+("([\n    (trigger: BattleStart, actions: [add_target(owner), apply_status]),\n])", 1, 0)

@@ -1,0 +1,1 @@
+("([\n    (trigger: BattleStart, actions: [add_target(adjacent_back), add_target(adjacent_front), apply_status]),\n])", 1750159013855191, 0)
