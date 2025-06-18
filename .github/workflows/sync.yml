@@ -1,0 +1,56 @@
+name: Sync Node Assets
+
+on:
+  workflow_dispatch:
+    inputs:
+      sync_direction:
+        description: 'Sync direction'
+        required: true
+        default: 'to-remote'
+        type: choice
+        options:
+          - 'to-remote'
+          - 'from-remote'
+  
+  # Automatically sync when main branch is updated
+  push:
+    branches: [ main ]
+    paths: [ 'nodes/**' ]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Make sync script executable
+      run: chmod +x scripts/sync.py
+      
+    - name: Validate node assets
+      run: |
+        python -c "
+        import os
+        import json
+        from pathlib import Path
+        
+        nodes_path = Path('nodes')
+        if nodes_path.exists():
+            print(f'Found {len(list(nodes_path.rglob(\"*.ron\")))} node files')
+            print(f'Found {len(list(nodes_path.iterdir()))} node type directories')
+        else:
+            print('No nodes directory found')
+        "
+        
+    - name: Show sync status
+      run: |
+        echo "Repository Status:"
+        echo "- Total node files: $(find nodes -name '*.ron' 2>/dev/null | wc -l)"
+        echo "- Node types: $(find nodes -type d -mindepth 1 -maxdepth 1 2>/dev/null | wc -l)"
+        echo "- Links file exists: $([ -f nodes/links.ron ] && echo 'Yes' || echo 'No')"
