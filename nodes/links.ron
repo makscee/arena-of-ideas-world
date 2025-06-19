@@ -1,5 +1,0 @@
-// Links between nodes
-// Format: (parent_id, child_id, parent_kind, child_kind, rating)
-[
-    // Example: (1, 2, "NTeam", "NUnit", 100)
-]
