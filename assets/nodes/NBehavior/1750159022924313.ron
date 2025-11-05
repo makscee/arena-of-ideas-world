@@ -1,1 +1,0 @@
-("([\n    (trigger: BattleStart, actions: [add_target(random_unit(all_enemy_units)), add_target(random_unit(all_enemy_units)), use_ability, add_target(random_unit(all_enemy_units))]),\n])", 1, 0)

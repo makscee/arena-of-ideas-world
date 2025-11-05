@@ -1,1 +1,0 @@
-("([\n    (trigger: ChangeStat(hp), actions: [add_value(i32(1))]),\n])", 1, 0)

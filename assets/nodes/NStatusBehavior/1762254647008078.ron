@@ -1,0 +1,1 @@
+("[(trigger:ChangeIncomingDamage,actions:[change_status_stax(neg(min(stax,var(value)))),subtract_value(min(stax,var(value)))])]", 1, 0)
