@@ -1,0 +1,1 @@
+("([hollow(f32(11.0)),feathering(f32(32.0)),circle(mul(f32(0.4),abs(sin(gt))))])", 1, 0)

@@ -1,0 +1,1 @@
+("((trigger:AllyDeath,actions:[add_target(random_unit(all_enemy_units)),use_ability]),Ability)", 1, 0)
