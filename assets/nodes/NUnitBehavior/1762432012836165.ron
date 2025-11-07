@@ -1,0 +1,1 @@
+("((trigger:BattleStart,actions:[add_target(adjacent_front),add_target(adjacent_back),apply_status]),Status)", 1, 0)

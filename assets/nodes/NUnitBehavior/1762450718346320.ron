@@ -1,0 +1,1 @@
+("((trigger:TurnEnd,actions:[add_target(adjacent_front),use_ability]),Ability)", 1, 0)
