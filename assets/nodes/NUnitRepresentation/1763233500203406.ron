@@ -1,0 +1,1 @@
+("([repeat(i32(5),list([hollow(f32(1.0)),circle(mul(abs(sin(sum(gt,var(index)))),mul(var(index),f32(0.2))))]))])", 1, 0)

@@ -1,0 +1,1 @@
+("((trigger:DamageTaken,actions:[set_target(random_unit(all_enemy_units)),use_ability,use_ability]),Ability)", 1, 0)
